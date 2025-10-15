@@ -1,10 +1,8 @@
-# SC2008 Lab 4 — Network Flow Analysis (sFlow)
+# SC2008 (Computer Network) - Lab 4
 
-### Overview
+## Overview
 
 This lab analyzes network traffic using **sFlow data** to identify top talkers, listeners, communication pairs, application protocols, and total traffic volume. It uses Python libraries to clean, process, and visualize flow records collected from campus or simulated networks.
-
----
 
 ## Features
 
@@ -12,8 +10,6 @@ This lab analyzes network traffic using **sFlow data** to identify top talkers, 
 * **Application Protocols:** Map port numbers to standard services (HTTP, HTTPS, etc.).
 * **Traffic Calculation:** Estimate total traffic from IP packet sizes (in bytes) with sampling adjustment.
 * **Network Visualization:** Display IP-to-IP communication with edge thickness proportional to packet counts and directional arrows.
-
----
 
 ## Tools & Libraries
 
@@ -25,8 +21,6 @@ pip install pandas matplotlib networkx ipwhois
 * **matplotlib** → visualization and graph plotting
 * **networkx** → building directed communication graphs
 * **ipwhois** → organization lookup for IP addresses
-
----
 
 ## Workflow Summary
 
@@ -42,7 +36,6 @@ pip install pandas matplotlib networkx ipwhois
    Here, `IP_size` is in **bytes**, converted to **MB**, and scaled by the sampling rate (e.g., 2048).
 5. **Visualize Network:** Generate a directed graph showing communication intensity and flow direction between IP hosts.
 
----
 
 ## Summary
 
@@ -50,7 +43,6 @@ pip install pandas matplotlib networkx ipwhois
 * **Estimated Traffic Volume:** ~20 MB (scaled to ~40 GB with sampling)
 * **Observation:** Few dominant flows represent the majority of total traffic, showing strong inter-institutional and cloud-based activity.
 
----
 
 ## Visualization
 
@@ -59,13 +51,10 @@ pip install pandas matplotlib networkx ipwhois
 * **Colors:** Teal–purple gradient for unique identity.
 * **Edge Labels:** Show number of packets exchanged.
 
----
 
 ## Conclusion
 
 This lab demonstrates how traffic data can be analyzed programmatically to reveal communication patterns in large-scale networks. The visual and statistical insights support better understanding of dominant nodes and link behaviors.
-
----
 
 **Author:** An Loc Nguyen
 
